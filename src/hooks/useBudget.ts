@@ -10,13 +10,6 @@ export const useBudget = () =>{
     return context
 }
 
-/*
-{isValidBudget && (
-        <main className="max-w-3xl mx-auto py-10">
-            <ExpenseModal/>
-        </main>
-      )}
 
-*/
 
 

@@ -132,12 +132,14 @@ export default function ExpenseForm() {
         <div className="flex flex-col gap-2">
           <label
             htmlFor="amount"
-            className="text-xl">
+            className="text-xl"
+          >
             Fecha Gasto:
           </label>
           <DatePicker
             className="bg-slate-100 p-2 border-0"
             onChange={handleChangeDate}
+            value={expense.date}
           />
         </div>
 
