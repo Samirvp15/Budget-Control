@@ -19,7 +19,17 @@ export default function BudgetTracker() {
                     </button>
 
                     <AmountDisplay
-                        label="XDD"
+                        label="Presupuesto"
+                        amount={500}
+                    />
+
+                    <AmountDisplay
+                        label="Disponible"
+                        amount={500}
+                    />
+
+                    <AmountDisplay
+                        label="Gastado"
                         amount={500}
                     />
 

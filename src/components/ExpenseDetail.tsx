@@ -52,8 +52,8 @@ export default function ExpenseDetail({ expense }: ExpenseDetailProps) {
                 maxSwipe={30}
                 leadingActions={leadingActions()}
                 trailingActions={trailingActions()}>
-                <div className="bg-white shadow-lg p-10 w-full 
-        border-b border-gray-400 flex gap-5 items-center">
+                <div className="bg-slate-50 shadow-lg p-10 w-full 
+        border-b border-gray-600 flex gap-5 items-center">
                     <div>
                         <img src={`/icono_${categoryInfo.icon}.svg`} alt="icono gasto"
                             className="w-20" />

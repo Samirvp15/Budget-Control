@@ -22,8 +22,8 @@ export default function ExpenseForm() {
   const [error, setError] = useState('')
   const { dispatch, state } = useBudget()
 
-  useEffect(()=>{
-    if(state.editingId){
+  useEffect(() => {
+    if (state.editingId) {
       const editingExpense = state.expenses.filter(currentExpense => currentExpense.id === state.editingId)[0]
       setExpense(editingExpense)
     }
@@ -57,9 +57,9 @@ export default function ExpenseForm() {
     }
 
     //AGREGAR O ACTUALIZAR GASTO
-    if(state.editingId){
-      dispatch({ type: 'update-expense', payload: { expense: {id: state.editingId, ...expense} } })
-    }else {
+    if (state.editingId) {
+      dispatch({ type: 'update-expense', payload: { expense: { id: state.editingId, ...expense } } })
+    } else {
       dispatch({ type: 'add-expense', payload: { expense } })
     }
 
@@ -78,7 +78,7 @@ export default function ExpenseForm() {
       <form action="" className="space-y-5" onSubmit={handleSubmit}>
         <legend className=" uppercase text-center text-2xl 
       font-black border-b-4 py-2 border-blue-500">
-          Nuevo Gasto
+          {state.editingId ? 'Actualizar datos' : 'Nuevo Gasto'}
         </legend>
 
         {error && <ErrorMessage>{error}</ErrorMessage>}
@@ -160,7 +160,7 @@ export default function ExpenseForm() {
           type="submit"
           className="bg-blue-600 cursor-pointer w-full p-2
              text-white uppercase font-bold rounded-lg"
-          value={'Registrar gasto'} />
+          value={state.editingId ? 'Guardar Cambios' : 'Registrar Gasto'} />
 
 
       </form>
