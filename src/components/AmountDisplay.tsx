@@ -12,7 +12,7 @@ export default function AmountDisplay({label,amount}: AmountDisplayProps) {
     
     <p className="text-2xl text-blue-500 font-bold">
         {label && `${label}: `}
-        <span className="font-black">{formatCurrency(amount)}</span>
+        <span className="font-bold text-black">{formatCurrency(amount)}</span>
     </p>
    
    </>
